@@ -20,7 +20,7 @@ public class C0618_12 {
 			}
 		}
 		
-		// 2명의 학생성적 출력
+		// 3명의 학생성적 출력
 		for(int i=0;i<title.length;i++) {
 			System.out.print(title[i]+"\t");
 		}

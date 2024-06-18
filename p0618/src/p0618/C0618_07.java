@@ -44,7 +44,7 @@ public class C0618_07 {
 		while(n<6) {
 			System.out.printf("%d번째 숫자를 입력하세요.(1-45까지 숫자) >>",n+1);
 			num = scan.nextInt();
-			if(num>1 || num>45) {
+			if(num<1 || num>45) {
 				System.out.println("1-45까지의 숫자만 입력하셔야합니다. 다시 입력해주세요.");
 				continue;
 			}
@@ -85,24 +85,30 @@ public class C0618_07 {
 		System.out.print("당첨금액 : ");
 		switch(count) {
 		
-		case 6:
-			System.out.println("100억");
+		case 6: System.out.println("100억");
 			break;
-		case 5:
-			System.out.println("1억");
+		case 5: System.out.println("1억");
 			break;
-		case 4:
-			System.out.println("100만원");
+		case 4: System.out.println("100만원");
 			break;
-		case 3:
-			System.out.println("만원");
+		case 3: System.out.println("만원");
 			break;
-		default:
-			System.out.println("없음");
+		default: System.out.println("없음");
 			break;
 		}
 		
 		
+		
+//		if(count==6)
+//			System.out.println("100억");
+//		else if(count==5)
+//			System.out.println("1억");
+//		else if(count==4)
+//			System.out.println("100만원");
+//		else if(count==3)
+//			System.out.println("만원");
+//		else
+//			System.out.println("없음");
 //		System.out.println(Arrays.toString(ball));
 		
 		
