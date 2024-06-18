@@ -10,7 +10,7 @@ public class C0617_11 {
 		System.out.println("프로그램을 종료할까요?(종료:x)");
 		String str = scan.next();
 //		if(str.equals("x") || str.equals("X")){
-		if(str.equalsIgnore){
+		if(str.equalsIgnoreCase("x")){
 			System.out.println("프로그램을 종료합니다.");
 		}else {
 			System.out.println("프로그램을 계속 실행합니다.");
