@@ -2,7 +2,7 @@ package p0619;
 
 import java.util.Scanner;
 
-public class C0619_01 {
+public class C0619_01_로또 {
 
 	public static void main(String[] args) {
 		
@@ -85,6 +85,13 @@ public class C0619_01 {
 		}
 		
 		System.out.println();
+		
+		
+		
+		
+		
+		
+		
 //		//--------------2차원 배열 입력---------------
 //		int[][] arr = new int[5][5];
 //		for(int i=0;i<arr.length;i++) {

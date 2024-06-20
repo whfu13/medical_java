@@ -3,7 +3,7 @@ package p0618;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class C0618_07 {
+public class C0618_07_로또 {
 
 	public static void main(String[] args) {
 		

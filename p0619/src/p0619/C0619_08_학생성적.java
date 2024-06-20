@@ -153,6 +153,8 @@ public class C0619_08_학생성적 {
 						// 합계,평균 변경
 						score[temp_no][3] = score[temp_no][0]+score[temp_no][1]+score[temp_no][2];
 						avg[temp_no] = score[temp_no][3]/3.0;
+						
+						// 영어점수 - score[temp_no][1]
 						System.out.printf("변경된 %s점수 : %d \n",title[choice+1],score[temp_no][choice-1]);
 						System.out.println();
 						
@@ -167,6 +169,7 @@ public class C0619_08_학생성적 {
 						// 합계,평균 변경
 						score[temp_no][3] = score[temp_no][0]+score[temp_no][1]+score[temp_no][2];
 						avg[temp_no] = score[temp_no][3]/3.0;
+						
 						// 수학점수 - score[temp_no][2]
 						System.out.printf("변경된 국어점수 : %d \n",title[choice+1],score[temp_no][choice-1]);
 						System.out.println();

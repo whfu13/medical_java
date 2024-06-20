@@ -64,8 +64,10 @@ public class C0619_09 {
 					System.out.printf("%d\n",rank[s_count]);
 					System.out.println();
 					s_count ++;
-				}
+					
 					break;
+				}
+					
 				case 2:
 					System.out.println("[ 성적출력 ]");
 					break;
