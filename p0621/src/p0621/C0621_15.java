@@ -1,10 +1,10 @@
-package p0620;
+package p0621;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-public class C0620_08_학생성적클래스사용 {
+public class C0621_15 {
 
 	int num = 0; // 인스턴스변수 - 객체선언 후 참조변수명.변수명으로 사용
 	static int n = 0; // 클래스 변수 - 객체선언없이 사용, 클래스명.변수명으로 사용
@@ -20,18 +20,7 @@ public class C0620_08_학생성적클래스사용 {
 		
 		while(true) {
 			// 화면부분
-			System.out.println("[ 학생성적 프로그램 ]");
-			System.out.println("---------------------");
-			System.out.println("1. 성적입력");
-			System.out.println("2. 성적출력");
-			System.out.println("3. 성적수정");
-			System.out.println("4. 학생검색");
-			System.out.println("5. 등수처리");
-			System.out.println("0. 프로그램 종료");
-			System.out.println("---------------------");
-			System.out.println("원하는 번호를 입력하세요.>> ");
 			int choice = scan.nextInt();
-			scan.nextLine(); //enter키 때문
 			switch(choice) {
 			case 1:
 				while(true) {
