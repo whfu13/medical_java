@@ -2,7 +2,7 @@ package p0624;
 
 import java.util.Scanner;
 
-public class C0624_14 {
+public class C0624_14_백준5597번 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
