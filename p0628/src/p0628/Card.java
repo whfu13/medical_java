@@ -2,7 +2,7 @@ package p0628;
 
 public class Card {
 	
-//	enum Kind{ SPADE,DIAMOND,HEART,CLOVER}
+	enum Kind{ SPADE,DIAMOND,HEART,CLOVER}
 	
 	private int number;
 	private String kind;
