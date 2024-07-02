@@ -3,22 +3,22 @@ package Login;
 import java.util.ArrayList;
 
 public class User {
-	String id,pw,name,gender;
+	private String id;
+	private String pw;
+	private String name;
 //	String name;
 //	String gender;
 	ArrayList list = new ArrayList();
 	
 	User(){};
-	User(String id, String pw, String name, String gender) {
+	User(String id, String pw, String name) {
 		
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
-		this.gender = gender;
 //		setId(id);
 //		setPw(pw);
 //		setName(name);
-//		setGender(gender);
 		}
 	
 		public void setId(String id) {
@@ -42,13 +42,7 @@ public class User {
 		public String getName() {
 			return name;
 		}
-		public void setGender(String gender) {
-			this.gender = gender;
-		}
 		
-		public String getGender() {
-			return gender;
-		}
 		
 //		public boolean equals(Object o) {
 //			if(o == null || !(o instanceof User)) {
@@ -62,7 +56,7 @@ public class User {
 		
 		@Override
 		public String toString() {
-			return String.format("%s,%s,%s,%s \n",id,pw,name,gender);
+			return String.format("%s,%s,%s \n",id,pw,name);
 		}
 		
 
