@@ -84,8 +84,4 @@ public class Students {
 		this.rank = rank;
 	}
 	
-	
-	
-	
-
 }

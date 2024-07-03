@@ -7,19 +7,19 @@ public class User {
 	private String pw;
 	private String name;
 	private String email;
-	private String p_number;
+	private String p_num;
 //	String name;
 //	String gender;
 	ArrayList list = new ArrayList();
 	
 	User(){};
-	User(String id, String pw, String name,String email,String p_number) {
+	User(String id, String pw, String name,String email,String p_num) {
 		
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
 		this.email = email;
-		this.p_number = p_number;
+		this.p_num = p_num;
 //		setId(id);
 //		setPw(pw);
 //		setName(name);
@@ -53,28 +53,18 @@ public class User {
 		public String getEmail() {
 			return email;
 		}
-		public void setP_number(String p_number) {
-			this.p_number = p_number;
+		public void setP_num(String p_num) {
+			this.p_num = p_num;
 		}
 		
-		public String getP_number() {
-			return p_number;
+		public String getP_num() {
+			return p_num;
 		}
 		
-		
-//		public boolean equals(Object o) {
-//			if(o == null || !(o instanceof User)) {
-//				return false;
-//			}
-//			
-//			User temp = (User) o;
-//			
-//			return id.equals(temp.getId());
-//		}
 		
 		@Override
 		public String toString() {
-			return String.format("%s,%s,%s,%s,%s \n",id,pw,name,email,p_number);
+			return String.format("%s,%s,%s,%s,%s \n",id,pw,name,email,p_num);
 		}
 		
 

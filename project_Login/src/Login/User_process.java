@@ -1,0 +1,66 @@
+package Login;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class User_process {
+	Scanner scan = new Scanner(System.in);
+	String id,pw,name,email,p_num;
+	int choice = 1;
+	
+	// 로그인창 화면 메소드
+	int screen(ArrayList list) {
+		System.out.println("[ 회원가입 프로그램 ]");
+		System.out.printf("현재 입력된 회원수 : %d 명 \n",list.size());
+		System.out.println("---------------------");
+		System.out.println("1. 회원정보입력");
+		System.out.println("2. 회원정보출력");
+		System.out.println("3. 회원정보수정");
+		System.out.println("4. 비밀번호변경");
+		System.out.println("5. 회원탈퇴");
+		System.out.println("6. 회원정보저장");
+		System.out.println("0. 회원가입종료");
+		System.out.println("---------------------");
+		System.out.println("원하는 번호를 입력하세요.>> ");
+		choice = scan.nextInt();
+		scan.nextLine();
+		
+		return choice;
+	}
+	
+	void user_input(ArrayList list) {
+		while(true) {
+			System.out.printf("%d번째 회원이름을 입력하세요>>(0.이전페이지 이동) \n",list.size()+1);
+			id = scan.nextLine();
+			
+			if(id.equals("0")) {
+				System.out.println("이전 페이지로 이동합니다.");
+				System.out.println();
+				break;
+			}
+			
+			System.out.println("ID를 입력하세요.>>");
+			String id = scan.next();
+			System.out.println("PW를 입력하세요.>>");
+			String pw = scan.next();
+			System.out.println("이름을 입력하세요>>");
+			String name = scan.next();
+			System.out.println("이메일을 입력하세요>>");
+			String email = scan.next();
+			System.out.println("전화번호를 입력하세요>>");
+			String p_num = scan.next();
+			
+			list.add(new User(id,pw,name,email,p_num));
+			
+			System.out.printf("아이디 : %s\n비밀번호 : %s\n이름: %s\n이메일 : %s\n전화번호 : %s\n",id,pw,name,email,p_num);
+			System.out.println();
+		
+		}// user_input
+		
+//		void user_output(ArrayList list) {
+//			System.out.println("	[ 회원 정보출력 ]");
+//			for 
+//		}
+		
+	}
+}
