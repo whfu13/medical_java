@@ -71,7 +71,7 @@ public class Stu_process {
 	
 	//학생출력부분 메소드
 	void stu_print(ArrayList list) {
-		System.out.println("                    [ 학생 성적출력 ]");
+		System.out.println("                    [ 학생성적출력 ]");
 		for(int i=0;i<title.length;i++) {
 			System.out.printf("%s\t",title[i]);
 		}

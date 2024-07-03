@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 public class User_process {
 	Scanner scan = new Scanner(System.in);
-	String id,pw,name,email,p_num;
+	String[] title = {"아이디","비밀번호","이름","이메일","전화번호"};
+	String useNo,id,pw,name,email,p_num;
 	int choice = 1;
 	
 	// 로그인창 화면 메소드
@@ -28,7 +29,8 @@ public class User_process {
 		return choice;
 	}
 	
-	void user_input(ArrayList list) {
+	// 회원정보입력 부분 메소드
+	void use_input(ArrayList list) {
 		while(true) {
 			System.out.printf("%d번째 회원이름을 입력하세요>>(0.이전페이지 이동) \n",list.size()+1);
 			id = scan.nextLine();
@@ -49,18 +51,46 @@ public class User_process {
 			String email = scan.next();
 			System.out.println("전화번호를 입력하세요>>");
 			String p_num = scan.next();
+			scan.nextLine();
 			
-			list.add(new User(id,pw,name,email,p_num));
+			list.add(new User(useNo,id,pw,name,email,p_num));
 			
 			System.out.printf("아이디 : %s\n비밀번호 : %s\n이름: %s\n이메일 : %s\n전화번호 : %s\n",id,pw,name,email,p_num);
 			System.out.println();
+		}
+	}// user_input
 		
-		}// user_input
 		
-//		void user_output(ArrayList list) {
-//			System.out.println("	[ 회원 정보출력 ]");
-//			for 
+	void use_output(ArrayList list) {
+		System.out.println("		[ 회원정보출력 ]");
+		for(int i=0;i<title.length;i++) {
+			System.out.printf("%s\t",title[i]);
+		}
+		System.out.println();
+		System.out.println("---------------------------------------------------");
+		if(list.size()==0) {
+			System.out.println("< 출력할 회원정보가 없습니다. >");
+			System.out.println();
+			return;
+		}
+		
+		for(int i=0;i<list.size();i++) {
+			User u = (User) list.get(i);
+			System.out.printf("%s\t%s\t%s\t%s\t%s\t%s \n",
+			u.getUseNo(),u.getId(),u.getPw(),u.getName(),u.getEmail(),u.getP_num());
+			
+		}
+		System.out.println();
+		
+	}// user_output
+	
+//	// 회원정보수정 메소드
+//	void use_update(ArrayList list) {
+//		int temp_no = user_subSearch(list);
+//		
+//		if(temp_no==1) {
+//			System.out.println();
+//			
 //		}
-		
-	}
+//	}
 }
