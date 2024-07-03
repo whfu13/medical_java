@@ -16,7 +16,11 @@ public class LoginMain {
 			String pw = scan.next();
 			System.out.println("이름을 입력하세요>>");
 			String name = scan.next();
-			list.add(new User(id,pw,name));
+			System.out.println("이메일을 입력하세요>>");
+			String email = scan.next();
+			System.out.println("전화번호를 입력하세요>>");
+			String p_number = scan.next();
+			list.add(new User(id,pw,name,email,p_number));
 			System.out.printf("%s,%s,%s \n",id,pw,name);
 //			System.out.printf("비밀번호  : %s \n ",user1.pw);
 //			System.out.println();
