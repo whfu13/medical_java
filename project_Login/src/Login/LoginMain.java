@@ -12,7 +12,7 @@ public class LoginMain {
 		int choice = 0;
 		String useNo="", id="", pw="",name="",email="",p_num="";
 		list.add(new User(useNo,id,pw,name,email,p_num));
-		while (true) {
+	loop1: while (true) {
 //			choice = u.screen(list);
 //				
 //			switch(choice) {
@@ -25,9 +25,13 @@ public class LoginMain {
 //			case 3: // 회원정보수정 출력
 //				u.use_update(list);
 //				break;
-//		}
+//			case 0: // 프로그램종료
+//				System.out.println("프로그램을 종료합니다.");
+//				break loop1;
+////				
+//	}// switch
 			
-		}
+} // while
 			
 		
 //			if(u.id.equals(id) && u.pw.equals(pw)) {
@@ -38,7 +42,7 @@ public class LoginMain {
 //			}
 		
 	
-	}
+} // main
 	
 		
-}
+}// class
