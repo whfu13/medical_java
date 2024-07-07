@@ -61,12 +61,14 @@ public class User_process {
 			list.add(new User_Data(id,pw,name,email,p_num));
 			
 			// 아이디,패스워드 일치 확인
-			if(id.equals(id) && pw.equals(pw)) {
-			System.out.println("아이디,패스워드가 일치합니다.");	
-			}else {
-			System.out.println("아이디,패스워드가 일치하지않습니다.");
-		}
-			
+			for(int i=0; i<list.size(); i++) {
+				User_Data u = (User_Data) list.get(i);
+				if(u.getId().equals(id) && u.getPw().equals(pw)) {
+					System.out.println("아이디,패스워드가 일치합니다.");	
+				}else {
+				System.out.println("아이디,패스워드가 일치하지않습니다.");
+				}
+			}
 			
 		}// while
 	}// user_input

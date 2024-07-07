@@ -1,4 +1,4 @@
-package medical;
+package Medical;
 
 import java.util.ArrayList;
 
@@ -14,20 +14,37 @@ public class SampleData {
 	// 시설 코드 예시
 	// 1 : 요양원, 2 : 요양병원 3 : 실버타운
 	
+	private String medNo;
 	private String name;
 	private String address;
 	private int facility_code;
 	private int region_code;
+	static int count = 1;
 	
-	SampleData(){
-		
-	}
+	SampleData(){}
 	
 	SampleData(String name, String address, int facility_code, int region_code){
+		this.medNo = String.format("M%02d", count++);
 		this.name = name;
 		this.address = address;
 		this.facility_code = facility_code;
 		this.region_code = region_code;
+	}
+	
+	SampleData(String medNo,String name, String address, int facility_code, int region_code){
+		this.medNo = medNo;
+		this.name = name;
+		this.address = address;
+		this.facility_code = facility_code;
+		this.region_code = region_code;
+	}
+	
+	public String getMedNo() {
+		return medNo;
+	}
+	
+	public void setMedNo(String medNo) {
+		this.medNo = medNo;
 	}
 
 	public String getName() {
