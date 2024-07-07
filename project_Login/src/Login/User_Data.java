@@ -1,20 +1,30 @@
 package Login;
 
-import java.util.ArrayList;
-
-public class User {
+public class User_Data {
+	
 	private String useNo;
 	private String id;
 	private String pw;
 	private String name;
 	private String email;
 	private String p_num;
-	public static int count = 1;
+	static int count = 1;
 	
-	public User(){};
 	
-	public User(String useNo, String id, String pw, String name,String email,String p_num) {
-		this.useNo = String.format("U%03d", count++);
+	
+	public User_Data(){};
+	
+	public User_Data(String id, String pw, String name, String email,String p_num) {
+		this.useNo = String.format("U%03d",count++);
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
+		this.email = email;
+		this.p_num = p_num;
+	}
+	
+	public User_Data(String useNo, String id, String pw, String name,String email,String p_num) {
+		this.useNo = useNo;
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
@@ -56,7 +66,7 @@ public class User {
 		public void setEmail(String email) {
 			this.email = email;
 		}
-		
+
 		public String getP_num() {
 			return p_num;
 		}
@@ -65,14 +75,4 @@ public class User {
 		}
 		
 		
-		
-		@Override
-		public String toString() {
-			return String.format("%s,%s,%s,%s,%s \n",id,pw,name,email,p_num);
-		}
-
-		
-		
-
-
 }
